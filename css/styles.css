@@ -280,7 +280,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20rem;
+  gap: 10rem;
   margin-bottom: 3rem;
 }
 .image-container {
@@ -311,7 +311,7 @@ html {
   font-size: 1.5rem;
 }
 @media (max-width: 768px) {
-  .dumbbells {
+  .gain-weight-img, .lose-weight-img {
     width: 280px;
   }
   .inphoto {
