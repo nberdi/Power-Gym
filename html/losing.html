@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../icons/dumbbell.png">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="common-bg">
+  <header>
+    <div class="logo-title-container"></div>
+    <nav></nav>
+  </header>
+  
+  <main>
+    <div class="container losing-container">
+      <div class="question-text">
+        <h1>Questions</h1>
+      </div>
+  
+      <div class="q1">
+        <h3 class="question">Q1. Your age:</h3>
+        <div>
+          <input type="radio" name="question1" id="age1" value="18-24">
+          <label for="age1">18-24</label><br>
+        </div>
+        <div>
+          <input type="radio" name="question1" id="age2" value="25-34">
+          <label for="age2">25-34</label><br>
+        </div>
+        <div>
+          <input type="radio" name="question1" id="age3" value="35-44">
+          <label for="age3">35-44</label><br>
+        </div>
+        <input type="button" id="submit1" value="Next question" onclick="showNextQuestion('.q2', 1)">
+      </div>
+      
+      <div class="q2">
+        <h3 class="question">Q2. Weight Loss Goals:</h3>
+        <div>
+          <input type="radio" name="question2" id="loss1" value="Lose 5-10 pounds">
+          <label for="loss1">Lose 5-10 pounds</label><br>
+        </div>
+        <div>
+          <input type="radio" name="question2" id="loss2" value="Lose 10-20 pounds">
+          <label for="loss2">Lose 10-20 pounds</label><br>
+        </div>
+        <div>
+          <input type="radio" name="question2" id="loss3" value="Lose 20+ pounds">
+          <label for="loss3">Lose 20+ pounds</label><br>
+        </div>
+        <div>
+          <input type="button" id="prev2" value="Previous question" onclick="showPrevQuestion('.q1', 2)">
+          <input type="button" id="submit2" value="Next question" onclick="showNextQuestion('.q3', 2)">
+        </div>
+      </div>
+  
+      <div class="q3">
+        <h3 class="question">Q3. Current Fitness Level:</h3>
+        <div>
+          <input type="radio" name="question3" id="fitness1" value="1-3">
+          <label for="fitness1">1-3 (Beginner)</label><br>
+        </div>
+        <div>
+          <input type="radio" name="question3" id="fitness2" value="4-7">
+          <label for="fitness2">4-7 (Moderate)</label><br>
+        </div>
+        <div>
+          <input type="radio" name="question3" id="fitness3" value="8-10">
+          <label for="fitness3">8-10 (Advanced)</label><br>
+        </div>
+        <div>
+          <input type="button" id="prev3" value="Previous question" onclick="showPrevQuestion('.q2', 3)">
+          <input type="button" id="submit3" value="Next question" onclick="showNextQuestion('.q4', 3)">
+        </div>
+      </div>
+      
+      <div class="q4">
+        <h3 class="question">Q4. Preferred Workout Frequency and Duration:</h3>
+        <div>
+          <input type="radio" name="question4" id="freq1" value="3 times a week (30 minutes each)">
+          <label for="freq1">3 times a week (30 minutes each)</label><br>
+        </div>
+        <div>
+          <input type="radio" name="question4" id="freq2" value="4-5 times a week (45 minutes each)">
+          <label for="freq2">4-5 times a week (45 minutes each)</label><br>
+        </div>
+        <div>
+          <input type="radio" name="question4" id="freq3" value="5-6 times a week (60 minutes each)">
+          <label for="freq3">5-6 times a week (60 minutes each)</label><br>
+        </div>
+        <div>
+          <input type="button" id="prev4" value="Previous question" onclick="showPrevQuestion('.q3', 4)">
+          <input type="button" id="submit4" value="Next question" onclick="showNextQuestion('.q5', 4)">
+        </div>
+      </div>
+  
+      <div class="q5">
+        <h3 class="question">Q5. Dietary Preferences:</h3>
+        <div>
+          <input type="radio" name="question5" id="diet1" value="No restrictions">
+          <label for="diet1">No restrictions</label><br>
+        </div>
+        <div>
+          <input type="radio" name="question5" id="diet2" value="Low-carb">
+          <label for="diet2">Low-carb</label><br>
+        </div>
+        <div>
+          <input type="radio" name="question5" id="diet3" value="Vegetarian">
+          <label for="diet3">Vegetarian</label><br>
+        </div>
+        <div>
+          <input type="button" id="prev5" value="Previous question" onclick="showPrevQuestion('.q4', 5)">
+          <input type="button" id="submit5" value="Submit" onclick="redirectToNewPage()">
+        </div>
+      </div>
+    </div>
+    
+    <div class="go-back-link">
+      <h3><a href="./purpose.html">Go Back</a></h3>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="../js/losing.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
